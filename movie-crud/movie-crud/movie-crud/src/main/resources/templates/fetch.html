@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+        <div align="center">
+            <h1>Movie Records</h1>
+
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Genre</th>
+                    <th>Image</th>
+                    <th>Trailer</th>
+                    <th>Ratings</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+                <tr th:each="movie:${movies}">
+                    <td th:text="${movie.name}"></td>
+                    <td th:text="${movie.description}">Description</td>
+                    <td th:text="${movie.genre}">Genre</td>
+                    <td> <img height="50px" width="50px" th:src="${movie.imageLink}" alt=""> </td>                
+                    <td>
+                    </td>
+                    <td th:text="${movie.rating}">Ratings</td>
+                    <td>
+                     <a th:href="@{/delete(id=${movie.id})}">Delete</a>
+                    </td>
+                    <td>
+                     <a th:href="@{/edit(id=${movie.id})}">Edit</a>
+                    </td>                  
+                    
+                </tr>
+            </table>
+        </div>
+</body>
+</html>

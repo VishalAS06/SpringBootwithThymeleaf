@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Record</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Add Record</h1>
+
+        <form action="/insert" method="post">
+            <input type="text" name="name" placeholder="Enter Movie Name"><br><br>
+            <input type="text" name="description" placeholder="Enter Movie Description"><br><br>
+            <input type="text" name="imageLink" placeholder="Enter Movie Image Link"><br><br>
+            <input type="text" name="trailerLink" placeholder="Enter Movie Trailer Link"><br><br>
+            <input type="text" name="genre" placeholder="Enter Movie Genre"><br><br>
+            Rating: <input type="radio" name="rating" value="1">1
+            <input type="radio" name="rating" value="2">2
+            <input type="radio" name="rating" value="3">3
+            <input type="radio" name="rating" value="4">4
+            <input type="radio" name="rating" value="5">5
+            <br><br>
+            <button>Add</button>
+        </form>
+    </div>
+</body>
+</html>
